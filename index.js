@@ -31,3 +31,24 @@ console.log(selectedColors);
 
 selectedColors[2] = 'Purple';
 console.log(selectedColors);
+
+
+// Function
+
+function greet() {
+    console.log('Hello world!');
+}
+
+greet();
+
+function greetWithName(name) {
+    console.log('Hello' + ' ' + name);
+}
+
+greetWithName('Sagar');
+
+function greetMe(fName,lanme) {
+    console.log('Hello' + ' ' + fName + ' ' + lanme);
+}
+
+greetMe('Sagar','Kadam');
