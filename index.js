@@ -46,9 +46,18 @@ function greetWithName(name) {
 }
 
 greetWithName('Sagar');
-
+// Function performing task
 function greetMe(fName,lanme) {
     console.log('Hello' + ' ' + fName + ' ' + lanme);
 }
 
 greetMe('Sagar','Kadam');
+
+
+// Function performing calculations
+
+function square(number) {
+    return number * number
+}
+
+console.log(square(4));
