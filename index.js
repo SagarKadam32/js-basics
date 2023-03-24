@@ -82,3 +82,11 @@ console.log('Loose Equality Operator');
 console.log(1 == 1);
 console.log('1' == 1);
 console.log(true == 1);
+
+
+// Ternary Operator
+console.log('Ternary Operator');
+let points = 110;
+let type =  points > 100 ? 'gold' : 'silver';
+
+console.log(type);
