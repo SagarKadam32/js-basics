@@ -24,3 +24,10 @@ person.name = 'Josh';
 person.age = 47;
 console.log(person.name);
 console.log(person.age);
+
+// Array
+let selectedColors = ['Red', 'Blue'];
+console.log(selectedColors);
+
+selectedColors[2] = 'Purple';
+console.log(selectedColors);
