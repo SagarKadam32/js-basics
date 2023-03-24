@@ -11,3 +11,16 @@ let isAwesome = true; // Boolean
 let boxItem = undefined;
 let selectedColor = null;
 age = 32.34;
+
+// Object
+let person = {
+    name: 'Tom',
+    age: 56
+}
+console.log(person.name);
+console.log(person.age);
+
+person.name = 'Josh';
+person.age = 47;
+console.log(person.name);
+console.log(person.age);
