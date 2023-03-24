@@ -90,3 +90,30 @@ let points = 110;
 let type =  points > 100 ? 'gold' : 'silver';
 
 console.log(type);
+
+let a = 'red';
+let b = 'blue';
+
+
+console.log('Original');
+console.log(a);
+console.log(b);
+
+
+let c = a;
+a = b;
+b = c;
+console.log('Afer Swapping');
+console.log(a);
+console.log(b);
+
+console.log('FOR IN LOOP');
+for(key in person) {
+    console.log(key, person[key]);
+}
+
+console.log('FOR OF LOOP');
+let colors = ['red', 'green', 'blue'];
+for(color of colors) {
+    console.log(color);
+}
