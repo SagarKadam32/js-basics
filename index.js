@@ -61,3 +61,24 @@ function square(number) {
 }
 
 console.log(square(4));
+
+
+// Arithmatic operators
+
+// Comparison operators
+
+let x = 1
+console.log('Equality Operator');
+console.log(x === 1);
+console.log(x !== 1);
+
+// String Equality Operator
+console.log('Strict Equality Operator');
+console.log(1 === 1);
+console.log('1' === 1);
+
+// Lose Equality Operator
+console.log('Loose Equality Operator');
+console.log(1 == 1);
+console.log('1' == 1);
+console.log(true == 1);
