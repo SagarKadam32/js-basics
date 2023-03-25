@@ -117,3 +117,18 @@ let colors = ['red', 'green', 'blue'];
 for(color of colors) {
     console.log(color);
 }
+
+function getMax(num1, num2) {
+    if(num1 > num2) {
+        return num1
+    }else {
+        return num2
+    }
+}
+function max(num1, num2) {
+    return (num1 > num2) ? num1 : num2;
+}
+
+console.log('Max of Two');
+console.log(getMax(65,645));
+console.log(max(65,645));
