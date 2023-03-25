@@ -629,6 +629,29 @@ function countOfOccurances(array, searchEleement) {
     return count;
 }
 
+createHeader('Excercise-6 - Get Max');
+const numbers5 = [1,2,23,3,4,5]
+const maxNumber = getMaxNumberFromArray(numbers5);
+console.log(maxNumber);
+
+function getMaxNumberFromArray(array) {
+    
+    if(array.length === 0) return undefined;
+
+    /*
+    let max = array[0];
+
+    for(let i = 1; i< array.length; i++) {
+        if (array[i] > max ) {
+            max =  array[i]
+        }
+    } 
+    return max;
+    */
+    return array.reduce((a,b) => (a > b) ? a : b);
+}
+
+
 
 
 
