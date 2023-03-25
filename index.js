@@ -362,9 +362,7 @@ function showStars(rows) {
     }
 }
 
-console.log('=============================');
-console.log('Objects');
-console.log('=============================');
+createHeader('Objects');
 
 const circle = {
     radius: 1,
@@ -379,3 +377,25 @@ const circle = {
 };
 
 circle.draw();
+
+function createHeader(sectionTitle) {
+    console.log('=============================');
+    console.log(sectionTitle);
+    console.log('=============================');
+}
+
+createHeader('Factory Functions');
+function createCircle(radius) {
+    return {
+        radius,
+        draw() {
+            console.log('draw');
+        }
+    };
+}
+const circle1 = createCircle(1);
+console.log(circle1);
+
+const circle2 = createCircle(2);
+console.log(circle2);
+
