@@ -534,15 +534,6 @@ console.log(areEqual(myAddr3,myAddr4))
 
 createHeader('Excercise-4 : Blog Post Object');
 
-function BlogPost(title, body, author, views, comments, isLive) {
-    this.title,
-    this.body,
-    this.author,
-    this.views,
-    this.comments,
-    this.isLive
-}
-
 let myPost = {
                 title: 'Ekigai',
                 body: `This is the body of the post
@@ -557,6 +548,22 @@ let myPost = {
                 };
 console.log(myPost);
                 
+createHeader('Excercise-6 : Constructor Functions');
+
+function MyBlogPost(title, body, author) {
+    this.title = title;
+    this.body = body;
+    this.author = author;
+    this.views = 0;
+    this.comments = [];
+    this.isLive = false
+}
+
+let myNewPost = new MyBlogPost('Title-A', 
+                                'Body content of post', 
+                                'Sagar Kadam');
+console.log(myNewPost);
+
 
 
 
