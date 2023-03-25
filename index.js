@@ -598,8 +598,23 @@ function includes(array, searchElement) {
         if(element === searchElement) return true;
     }
     return false;
-
 }
+
+createHeader('Excercise-3 - Except Elements');
+const numbers3 = [1,2,3,4,5,6,1,5,2];
+const excludedArray = except(numbers3, [1,2]);
+console.log(excludedArray);
+
+function except(array, excluded) {
+    let newArray = []
+    for(element of array) {
+        if(!excluded.includes(element))
+        newArray.push(element)
+    }
+    return newArray;
+}
+
+
 
 
 
