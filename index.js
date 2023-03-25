@@ -532,6 +532,35 @@ function areEqual(add1, add2) {
 console.log(areEqual(myAddr3,myAddr4))
 
 
+createHeader('Excercise-4 : Blog Post Object');
+
+function BlogPost(title, body, author, views, comments, isLive) {
+    this.title,
+    this.body,
+    this.author,
+    this.views,
+    this.comments,
+    this.isLive
+}
+
+let myPost = {
+                title: 'Ekigai',
+                body: `This is the body of the post
+                    formatted in a long way...`,
+                author: 'Hector Gracia',
+                views: 1000,
+                comments: [
+                    {author: 'Test Commentor-1', body: 'This is very nice book'},
+                    {author: 'Test Commentor-2', body: 'This is very nice book'},
+                    ],
+                isLive:  true
+                };
+console.log(myPost);
+                
+
+
+
+
 
 
 
