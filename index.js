@@ -268,5 +268,42 @@ function sum(limit) {
             sumAmount += i;
         }
     }
+
     return sumAmount;
+}
+
+console.log('Excercise - Grades');
+
+// Calculate the average
+// 1-59 : F
+// 60-69 : D
+// 70-79 : C
+// 80-89 : B
+// 90-100 : A
+
+const marks = [80, 80, 50];
+console.log(calculateGrade(marks));
+
+function calculateGrade(marks) {
+    let average = 0;
+    let totalMarks = 0;
+    let subjectCount = 0;
+
+    for(score of marks) {
+        totalMarks += score;
+        subjectCount += 1;
+    }
+    average = totalMarks/subjectCount;
+
+    if(average >= 1 && average <= 59) {
+        return 'F'
+    }else if(average >= 60 && average <= 69) {
+        return 'D'
+    }else if(average >= 70 && average <= 79) {
+        return 'C'
+    }else if(average >= 80 && average <= 89) {
+        return 'B'
+    }else if(average >= 90 && average <= 100) {
+        return 'A'
+    }
 }
