@@ -614,6 +614,22 @@ function except(array, excluded) {
     return newArray;
 }
 
+createHeader('Excercise-5 - Count of Occurances');
+const numbers4 = [1,2,3,4,5,1,1,1];
+const count = countOfOccurances(numbers4, 1);
+console.log(count);
+
+function countOfOccurances(array, searchEleement) {
+    let count = 0;
+    for (element of array) {
+        if(element === searchEleement) {
+            count += 1 
+        }
+    }
+    return count;
+}
+
+
 
 
 
