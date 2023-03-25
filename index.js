@@ -470,10 +470,10 @@ function showAddress(address) {
 
 createHeader('Excercise-2 : Adress using the factory function');
 
-function createAddress(street, state, zipCode) {
+function createAddress(street, city, zipCode) {
     return {
         street,
-        state,
+        city,
         zipCode
     }
 }
@@ -483,13 +483,57 @@ console.log(myAddr1);
 
 createHeader('Excercise-2 : Adress using the Constructor function');
 
-function NewAddress(street, state, zipCode) {
+function NewAddress(street, city, zipCode) {
     this.street = street,
-    this.state = state,
+    this.city = city,
     this.zipCode = zipCode
 }
 const myAddr2 = new NewAddress('Road-Constructor','Mumbai',400055);
 console.log(myAddr2);
+
+createHeader('Excercise-3 : Object Equality');
+
+let myAddr3 = new NewAddress('Tejpal Scheme-1','Mumbai', 400057);
+let myAddr4 = new NewAddress('Tejpal Scheme-1','Mumbai', 400057);
+// myAddr4 = myAddr3;
+
+function areEqualSK(address1, address2) {
+    let addressAreEqual = false;
+
+    for(key1 in address1) {
+        for(key2 in address2) {
+            if (address1[key1] == address2[key2]) {
+                addressAreEqual = true;
+                console.log('Address are equal for the key', key1)
+                break;
+            }
+        }
+
+    }
+    if(!addressAreEqual) console.log('Addresses are not equal')
+}
+areEqualSK(myAddr3,myAddr4);
+
+function areSame(address1, address2) {
+    if(address1 === address2) {
+        return true;
+    }else {
+        return false;
+    }
+}
+console.log(areSame(myAddr3,myAddr4));
+
+function areEqual(add1, add2) {
+    return add1.street === add2.street &&
+            add1.city === add2.city && 
+            add1.zipCode === add2.zipCode
+}
+
+console.log(areEqual(myAddr3,myAddr4))
+
+
+
+
 
 
 
