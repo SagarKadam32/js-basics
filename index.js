@@ -384,18 +384,87 @@ function createHeader(sectionTitle) {
     console.log('=============================');
 }
 
+function addToMyNotes(array) {
+    for(element of array) {
+        console.log(element);
+    }
+}
+
 createHeader('Factory Functions');
 function createCircle(radius) {
     return {
         radius,
         draw() {
-            console.log('draw');
+            console.log('drawing factory function');
         }
     };
 }
 const circle1 = createCircle(1);
 console.log(circle1);
+circle1.draw();
 
 const circle2 = createCircle(2);
 console.log(circle2);
+
+addToMyNotes([
+    '1. Factory function is defined in camelCase',
+    '2. Factory function uses the return keyword',
+    '3. Factory function the function inside is directly referred w/o function keyword'])
+
+
+createHeader('Constructor Functions');
+function Circle(radius) {
+    this.radius = radius;
+    this.draw = function() {
+        console.log('drawing constructor function')
+    }
+}
+const myCircle = new Circle(1);
+myCircle.draw();
+
+addToMyNotes([
+    '1. Constructor function is defined in Pascal Notation i.e. SagarKadam',
+    '2. Here the memer is referred with this keyword',
+    '3. Function is called with the "new" keyword'])
+
+createHeader('Dynamic Nature of objects');
+
+const myNewCircle = {
+    radius:1
+}
+console.log(myNewCircle);
+myNewCircle.color = 'yellow';
+myNewCircle.draw = function() {}
+console.log(myNewCircle);
+
+delete myNewCircle.color;
+delete myNewCircle.draw;
+console.log(myNewCircle);
+
+
+addToMyNotes([
+    '1. Object properties in JS are dynamic, they can be added later or removed',
+    '2. Const is associated with the assignment for the object, properties within are dynamic'])
+
+
+createHeader('Excercise-1 : Creating object..');
+// street
+// city
+// zipCode
+// showAddress
+
+function Address(street, city, zipCode) {
+    this.street = street,
+    this.city = city,
+    this.zipCode = zipCode
+}
+
+const myAddress = new Address('Tejpal Scheme-2','Mumbai', 400057);
+showAddress(myAddress);
+
+function showAddress(address) {
+    for(key in address) {
+        console.log(key, address[key]);
+    }
+}
 
