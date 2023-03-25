@@ -674,6 +674,20 @@ const titles = movies
 
 console.log(titles);
 
+createHeader('Functions');
+
+createHeader('Excercise-1 - Sum of Arguments');
+console.log(sumElements([1,2,3,4]));
+
+function sumElements(...items) {
+    if(items.length === 1 && Array.isArray(items[0]))
+        items = [...items[0]];
+
+    return items.reduce((a,b) => a + b);
+}
+
+
+
 
 
 
