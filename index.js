@@ -579,20 +579,29 @@ let restaurants = [ {averagePerPerson: 5}]
 createHeader('Arrays');
 createHeader('Excercise-1 - Array From Ranges');
 
-const numbers = arrayFromRange(-10, -4);
+const numbers1 = arrayFromRange(-10, -4);
 
 function arrayFromRange(min, max) {
     let array = [];
-
     for(let number = min; number <= max; number++) {
         array.push(number);
     }
-
     console.log(array);
+}
 
+createHeader('Excercise-2 - Search element like includes');
+const numbers2= [1,2,3,4,5];
+console.log(includes(numbers2, 1) ? 'Number exists' : 'Number Not Found')
 
+function includes(array, searchElement) {
+    for(element of array) {
+        if(element === searchElement) return true;
+    }
+    return false;
 
 }
+
+
 
 
 
