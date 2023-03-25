@@ -210,3 +210,23 @@ function showNumbers(limit) {
     }
 }
 
+console.log('Count TRUTHY')
+const array = [1,2,3,'',5];
+
+// falsy
+// undefined
+// null
+// ''
+// false
+// 0
+// NaN
+countTruthy(array);
+function countTruthy(array) {
+    let truthy = 0
+    for(element of array) {
+        if (element) {
+            truthy ++;
+        }
+    }
+    console.log('Truthy Values = ', truthy);
+}
