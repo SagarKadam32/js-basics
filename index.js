@@ -565,6 +565,38 @@ let myNewPost = new MyBlogPost('Title-A',
 console.log(myNewPost);
 
 
+createHeader('Excercise-7 : Price Range Objects');
+
+let priceRanges = [
+    {label: '$', tooltip: 'Inexpensive', minPerPerson: 0, maxPerPerson: 10}, 
+    {label: '$$', tooltip: 'Moderate', minPerPerson: 11, maxPerPerson: 20}, 
+    {label: '$$$', tooltip: 'Expensive', minPerPerson: 21, maxPerPerson: 50}
+];
+
+let restaurants = [ {averagePerPerson: 5}]
+
+// function PriceObject(price) {
+//     this.price = price;
+//     this.pattern = '';
+
+//     this.typeOfObject = function () {
+//         if (this.price < 100) {
+//             this.pattern = '$'
+//         }else if (this.price < 1000 && this.price >= 100) {
+//             this.pattern = '$$'
+//         }else if (this.price < 10000 && this.price >= 1000) {
+//             this.pattern = '$$$'
+//         }
+//     }
+// }
+// const p1 = new PriceObject(43);
+// console.log(p1.typeOfObject());
+
+// const p2 = new PriceObject(143);
+// console.log(p2.typeOfObject());
+
+// const p3 = new PriceObject(2043);
+// console.log(p3.typeOfObject());
 
 
 
