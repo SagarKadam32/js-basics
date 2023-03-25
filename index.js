@@ -68,24 +68,36 @@ console.log(square(4));
 // Comparison operators
 
 let x = 1
+console.log('=============================');
 console.log('Equality Operator');
+console.log('=============================');
+
 console.log(x === 1);
 console.log(x !== 1);
 
 // String Equality Operator
+console.log('=============================');
 console.log('Strict Equality Operator');
+console.log('=============================');
+
 console.log(1 === 1);
 console.log('1' === 1);
 
 // Lose Equality Operator
+console.log('=============================');
 console.log('Loose Equality Operator');
+console.log('=============================');
+
 console.log(1 == 1);
 console.log('1' == 1);
 console.log(true == 1);
 
 
 // Ternary Operator
+console.log('=============================');
 console.log('Ternary Operator');
+console.log('=============================');
+
 let points = 110;
 let type =  points > 100 ? 'gold' : 'silver';
 
@@ -95,7 +107,9 @@ let a = 'red';
 let b = 'blue';
 
 
+console.log('=============================');
 console.log('Original');
+console.log('=============================');
 console.log(a);
 console.log(b);
 
@@ -103,16 +117,25 @@ console.log(b);
 let c = a;
 a = b;
 b = c;
+console.log('=============================');
 console.log('Afer Swapping');
+console.log('=============================');
+
 console.log(a);
 console.log(b);
 
+console.log('=============================');
 console.log('FOR IN LOOP');
+console.log('=============================');
+
 for(key in person) {
     console.log(key, person[key]);
 }
 
+console.log('=============================');
 console.log('FOR OF LOOP');
+console.log('=============================');
+
 let colors = ['red', 'green', 'blue'];
 for(color of colors) {
     console.log(color);
@@ -133,7 +156,10 @@ console.log('Max of Two');
 console.log(getMax(65,645));
 console.log(max(65,645));
 
+console.log('=============================');
 console.log('Function Landscape/Portrait');
+console.log('=============================');
+
 
 function isLandscape(width, height) {
     //return width > height ? 'Landscape' : 'Potrait'; 
@@ -141,7 +167,10 @@ function isLandscape(width, height) {
 }
 console.log(isLandscape(43,23));
 
+console.log('=============================');
 console.log('FizzBuzz Demo');
+console.log('=============================');
+
 // Divisible by 3 => Fizz
 // Divisible by 5 => Buzz
 // Divisible by both 3 & 5 => FizzBuzz
@@ -169,7 +198,10 @@ function fizzBuzz(input) {
     } 
 }
 
+console.log('=============================');
 console.log('Driver TestSpeed Demo');
+console.log('=============================');
+
 // Speed Limit = 70
 // 5 -> 1 point
 // Math.floor(1.3)
@@ -192,7 +224,10 @@ function checkSpeed(speed) {
         console.log('Points',points);
 }
 
+console.log('=============================');
 console.log('SHOW Numbers Demo');
+console.log('=============================');
+
 showNumbers(10);
 
 function showNumbers(limit) {
@@ -210,7 +245,10 @@ function showNumbers(limit) {
     }
 }
 
+console.log('=============================');
 console.log('Count TRUTHY')
+console.log('=============================');
+
 const array = [1,2,3,'',5];
 
 // falsy
@@ -231,7 +269,10 @@ function countTruthy(array) {
     console.log('Truthy Values = ', truthy);
 }
 
-console.log('Show Properties')
+console.log('=============================');
+console.log('Show Properties');
+console.log('=============================');
+
 
 const movie = {
     title: 'a',
@@ -254,7 +295,10 @@ function showProperties(obj) {
     }
 }
 
+console.log('=============================');
 console.log('Sum of Multiple of 3 and 5');
+console.log('=============================');
+
 // limit => 10
 // Multiple of 3 => 3,6,9
 // Multiple of 5 => 5,10
@@ -272,7 +316,9 @@ function sum(limit) {
     return sumAmount;
 }
 
+console.log('=============================');
 console.log('Excercise - Grades');
+console.log('=============================');
 
 // Calculate the average
 // 1-59 : F
@@ -299,4 +345,19 @@ function calculateAverage(array) {
         sum += value
     }
     return sum / array.length;
+}
+
+console.log('=============================');
+console.log('Excercise - Stars');
+console.log('=============================');
+showStars(10);
+
+function showStars(rows) {
+    for(let row = 1; row <= rows; row++) {
+        let pattern = ''
+        for(let i=0; i < row; i++) {
+            pattern += '*';
+        }
+        console.log(pattern)
+    }
 }
