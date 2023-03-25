@@ -141,3 +141,31 @@ function isLandscape(width, height) {
 }
 console.log(isLandscape(43,23));
 
+console.log('FizzBuzz Demo');
+// Divisible by 3 => Fizz
+// Divisible by 5 => Buzz
+// Divisible by both 3 & 5 => FizzBuzz
+// Divisible by 3 or 5 => input
+// Not a number => Not a number
+
+const output = fizzBuzz(45);
+console.log(output);
+
+function fizzBuzz(input) {
+    if (isNaN(input)) {
+        return 'Not a number';
+    }else if (input % 3 === 0 && input % 5 === 0) {
+        return 'FizzBuzz'
+    }else if (input % 3 === 0){
+        if (input % 5 === 0) {
+            return input;
+        }
+        return 'Fizz';
+    }else if (input % 5 === 0) {
+        if (input % 3 === 0) {
+            return input;
+        }
+        return 'Buzz';
+    } 
+}
+
