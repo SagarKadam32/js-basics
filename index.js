@@ -191,3 +191,22 @@ function checkSpeed(speed) {
     else
         console.log('Points',points);
 }
+
+console.log('SHOW Numbers Demo');
+showNumbers(10);
+
+function showNumbers(limit) {
+    for(i=0; i<= limit; i++) {
+        if( i % 2 === 0) {
+            console.log(i,'EVEN')
+        }else {
+           console.log(i,'ODD')
+        }
+    } 
+    
+    for(let j=0; j<=limit; j++) {
+        const message = (j % 2 === 0) ? 'EVEN' : 'ODD';
+        console.log(j,message);
+    }
+}
+
