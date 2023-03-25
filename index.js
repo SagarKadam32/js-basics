@@ -132,3 +132,12 @@ function max(num1, num2) {
 console.log('Max of Two');
 console.log(getMax(65,645));
 console.log(max(65,645));
+
+console.log('Function Landscape/Portrait');
+
+function isLandscape(width, height) {
+    //return width > height ? 'Landscape' : 'Potrait'; 
+    return (width > height);
+}
+console.log(isLandscape(43,23));
+
