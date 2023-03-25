@@ -468,3 +468,28 @@ function showAddress(address) {
     }
 }
 
+createHeader('Excercise-2 : Adress using the factory function');
+
+function createAddress(street, state, zipCode) {
+    return {
+        street,
+        state,
+        zipCode
+    }
+}
+
+const myAddr1 = createAddress('Road-1', 'Mumbai', 400054);
+console.log(myAddr1);
+
+createHeader('Excercise-2 : Adress using the Constructor function');
+
+function NewAddress(street, state, zipCode) {
+    this.street = street,
+    this.state = state,
+    this.zipCode = zipCode
+}
+const myAddr2 = new NewAddress('Road-Constructor','Mumbai',400055);
+console.log(myAddr2);
+
+
+
