@@ -575,32 +575,24 @@ let priceRanges = [
 
 let restaurants = [ {averagePerPerson: 5}]
 
-// function PriceObject(price) {
-//     this.price = price;
-//     this.pattern = '';
 
-//     this.typeOfObject = function () {
-//         if (this.price < 100) {
-//             this.pattern = '$'
-//         }else if (this.price < 1000 && this.price >= 100) {
-//             this.pattern = '$$'
-//         }else if (this.price < 10000 && this.price >= 1000) {
-//             this.pattern = '$$$'
-//         }
-//     }
-// }
-// const p1 = new PriceObject(43);
-// console.log(p1.typeOfObject());
+createHeader('Arrays');
+createHeader('Excercise-1 - Array From Ranges');
 
-// const p2 = new PriceObject(143);
-// console.log(p2.typeOfObject());
+const numbers = arrayFromRange(-10, -4);
 
-// const p3 = new PriceObject(2043);
-// console.log(p3.typeOfObject());
+function arrayFromRange(min, max) {
+    let array = [];
+
+    for(let number = min; number <= max; number++) {
+        array.push(number);
+    }
+
+    console.log(array);
 
 
 
-
+}
 
 
 
