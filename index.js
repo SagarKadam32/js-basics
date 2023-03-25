@@ -686,6 +686,17 @@ function sumElements(...items) {
     return items.reduce((a,b) => a + b);
 }
 
+createHeader('Excercise-2 - Area of a Circle');
+
+const myNewcicle = {
+    radius: 1,
+    get area() {
+        return Math.PI * this.radius * this.radius;
+    }
+};
+console.log(myNewcicle.area)
+
+
 
 
 
