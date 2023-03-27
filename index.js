@@ -47,11 +47,11 @@ function greetWithName(name) {
 
 greetWithName('Sagar');
 // Function performing task
-function greetMe(fName,lanme) {
+function greetMe(fName, lanme) {
     console.log('Hello' + ' ' + fName + ' ' + lanme);
 }
 
-greetMe('Sagar','Kadam');
+greetMe('Sagar', 'Kadam');
 
 
 // Function performing calculations
@@ -99,7 +99,7 @@ console.log('Ternary Operator');
 console.log('=============================');
 
 let points = 110;
-let type =  points > 100 ? 'gold' : 'silver';
+let type = points > 100 ? 'gold' : 'silver';
 
 console.log(type);
 
@@ -128,7 +128,7 @@ console.log('=============================');
 console.log('FOR IN LOOP');
 console.log('=============================');
 
-for(key in person) {
+for (key in person) {
     console.log(key, person[key]);
 }
 
@@ -137,14 +137,14 @@ console.log('FOR OF LOOP');
 console.log('=============================');
 
 let colors = ['red', 'green', 'blue'];
-for(color of colors) {
+for (color of colors) {
     console.log(color);
 }
 
 function getMax(num1, num2) {
-    if(num1 > num2) {
+    if (num1 > num2) {
         return num1
-    }else {
+    } else {
         return num2
     }
 }
@@ -153,8 +153,8 @@ function max(num1, num2) {
 }
 
 console.log('Max of Two');
-console.log(getMax(65,645));
-console.log(max(65,645));
+console.log(getMax(65, 645));
+console.log(max(65, 645));
 
 console.log('=============================');
 console.log('Function Landscape/Portrait');
@@ -165,7 +165,7 @@ function isLandscape(width, height) {
     //return width > height ? 'Landscape' : 'Potrait'; 
     return (width > height);
 }
-console.log(isLandscape(43,23));
+console.log(isLandscape(43, 23));
 
 console.log('=============================');
 console.log('FizzBuzz Demo');
@@ -183,19 +183,19 @@ console.log(output);
 function fizzBuzz(input) {
     if (isNaN(input)) {
         return 'Not a number';
-    }else if (input % 3 === 0 && input % 5 === 0) {
+    } else if (input % 3 === 0 && input % 5 === 0) {
         return 'FizzBuzz'
-    }else if (input % 3 === 0){
+    } else if (input % 3 === 0) {
         if (input % 5 === 0) {
             return input;
         }
         return 'Fizz';
-    }else if (input % 5 === 0) {
+    } else if (input % 5 === 0) {
         if (input % 3 === 0) {
             return input;
         }
         return 'Buzz';
-    } 
+    }
 }
 
 console.log('=============================');
@@ -218,10 +218,10 @@ function checkSpeed(speed) {
         return;
     }
     const points = Math.floor((speed - speedLimit) / kmPerPoint);
-    if(points >= 12)
+    if (points >= 12)
         console.log('Licences Suspended!!');
     else
-        console.log('Points',points);
+        console.log('Points', points);
 }
 
 console.log('=============================');
@@ -231,17 +231,17 @@ console.log('=============================');
 showNumbers(10);
 
 function showNumbers(limit) {
-    for(i=0; i<= limit; i++) {
-        if( i % 2 === 0) {
-            console.log(i,'EVEN')
-        }else {
-           console.log(i,'ODD')
+    for (i = 0; i <= limit; i++) {
+        if (i % 2 === 0) {
+            console.log(i, 'EVEN')
+        } else {
+            console.log(i, 'ODD')
         }
-    } 
-    
-    for(let j=0; j<=limit; j++) {
+    }
+
+    for (let j = 0; j <= limit; j++) {
         const message = (j % 2 === 0) ? 'EVEN' : 'ODD';
-        console.log(j,message);
+        console.log(j, message);
     }
 }
 
@@ -249,7 +249,7 @@ console.log('=============================');
 console.log('Count TRUTHY')
 console.log('=============================');
 
-const array = [1,2,3,'',5];
+const array = [1, 2, 3, '', 5];
 
 // falsy
 // undefined
@@ -261,9 +261,9 @@ const array = [1,2,3,'',5];
 countTruthy(array);
 function countTruthy(array) {
     let truthy = 0
-    for(element of array) {
+    for (element of array) {
         if (element) {
-            truthy ++;
+            truthy++;
         }
     }
     console.log('Truthy Values = ', truthy);
@@ -284,12 +284,12 @@ const movie = {
 showProperties(movie);
 
 function showProperties(obj) {
-    for(key in obj) {
+    for (key in obj) {
         console.log(key, obj[key]);
     }
 
-    for(key in obj) {
-        if(typeof obj[key] === 'string') {
+    for (key in obj) {
+        if (typeof obj[key] === 'string') {
             console.log(key, obj[key]);
         }
     }
@@ -307,8 +307,8 @@ console.log(sum(10));
 
 function sum(limit) {
     let sumAmount = 0;
-    for (let i=1; i<= limit; i++) {
-        if (i%3 === 0 || i%5 === 0) {
+    for (let i = 1; i <= limit; i++) {
+        if (i % 3 === 0 || i % 5 === 0) {
             sumAmount += i;
         }
     }
@@ -332,11 +332,11 @@ console.log(calculateGrade(marks));
 
 function calculateGrade(marks) {
     const average = calculateAverage(marks);
-    if(average < 60) return 'F';
-    if(average < 70) return 'D';
-    if(average < 80) return 'C';
-    if(average < 90) return 'B';
-    return 'A'    
+    if (average < 60) return 'F';
+    if (average < 70) return 'D';
+    if (average < 80) return 'C';
+    if (average < 90) return 'B';
+    return 'A'
 }
 
 function calculateAverage(array) {
@@ -353,9 +353,9 @@ console.log('=============================');
 showStars(10);
 
 function showStars(rows) {
-    for(let row = 1; row <= rows; row++) {
+    for (let row = 1; row <= rows; row++) {
         let pattern = ''
-        for(let i=0; i < row; i++) {
+        for (let i = 0; i < row; i++) {
             pattern += '*';
         }
         console.log(pattern)
@@ -371,7 +371,7 @@ const circle = {
         y: 1
     },
     isVisible: true,
-    draw: function() {
+    draw: function () {
         console.log('draw');
     }
 };
@@ -385,7 +385,7 @@ function createHeader(sectionTitle) {
 }
 
 function addToMyNotes(array) {
-    for(element of array) {
+    for (element of array) {
         console.log(element);
     }
 }
@@ -415,7 +415,7 @@ addToMyNotes([
 createHeader('Constructor Functions');
 function Circle(radius) {
     this.radius = radius;
-    this.draw = function() {
+    this.draw = function () {
         console.log('drawing constructor function')
     }
 }
@@ -430,11 +430,11 @@ addToMyNotes([
 createHeader('Dynamic Nature of objects');
 
 const myNewCircle = {
-    radius:1
+    radius: 1
 }
 console.log(myNewCircle);
 myNewCircle.color = 'yellow';
-myNewCircle.draw = function() {}
+myNewCircle.draw = function () { }
 console.log(myNewCircle);
 
 delete myNewCircle.color;
@@ -455,15 +455,15 @@ createHeader('Excercise-1 : Creating object..');
 
 function Address(street, city, zipCode) {
     this.street = street,
-    this.city = city,
-    this.zipCode = zipCode
+        this.city = city,
+        this.zipCode = zipCode
 }
 
-const myAddress = new Address('Tejpal Scheme-2','Mumbai', 400057);
+const myAddress = new Address('Tejpal Scheme-2', 'Mumbai', 400057);
 showAddress(myAddress);
 
 function showAddress(address) {
-    for(key in address) {
+    for (key in address) {
         console.log(key, address[key]);
     }
 }
@@ -485,23 +485,23 @@ createHeader('Excercise-2 : Adress using the Constructor function');
 
 function NewAddress(street, city, zipCode) {
     this.street = street,
-    this.city = city,
-    this.zipCode = zipCode
+        this.city = city,
+        this.zipCode = zipCode
 }
-const myAddr2 = new NewAddress('Road-Constructor','Mumbai',400055);
+const myAddr2 = new NewAddress('Road-Constructor', 'Mumbai', 400055);
 console.log(myAddr2);
 
 createHeader('Excercise-3 : Object Equality');
 
-let myAddr3 = new NewAddress('Tejpal Scheme-1','Mumbai', 400057);
-let myAddr4 = new NewAddress('Tejpal Scheme-1','Mumbai', 400057);
+let myAddr3 = new NewAddress('Tejpal Scheme-1', 'Mumbai', 400057);
+let myAddr4 = new NewAddress('Tejpal Scheme-1', 'Mumbai', 400057);
 // myAddr4 = myAddr3;
 
 function areEqualSK(address1, address2) {
     let addressAreEqual = false;
 
-    for(key1 in address1) {
-        for(key2 in address2) {
+    for (key1 in address1) {
+        for (key2 in address2) {
             if (address1[key1] == address2[key2]) {
                 addressAreEqual = true;
                 console.log('Address are equal for the key', key1)
@@ -510,44 +510,44 @@ function areEqualSK(address1, address2) {
         }
 
     }
-    if(!addressAreEqual) console.log('Addresses are not equal')
+    if (!addressAreEqual) console.log('Addresses are not equal')
 }
-areEqualSK(myAddr3,myAddr4);
+areEqualSK(myAddr3, myAddr4);
 
 function areSame(address1, address2) {
-    if(address1 === address2) {
+    if (address1 === address2) {
         return true;
-    }else {
+    } else {
         return false;
     }
 }
-console.log(areSame(myAddr3,myAddr4));
+console.log(areSame(myAddr3, myAddr4));
 
 function areEqual(add1, add2) {
     return add1.street === add2.street &&
-            add1.city === add2.city && 
-            add1.zipCode === add2.zipCode
+        add1.city === add2.city &&
+        add1.zipCode === add2.zipCode
 }
 
-console.log(areEqual(myAddr3,myAddr4))
+console.log(areEqual(myAddr3, myAddr4))
 
 
 createHeader('Excercise-4 : Blog Post Object');
 
 let myPost = {
-                title: 'Ekigai',
-                body: `This is the body of the post
+    title: 'Ekigai',
+    body: `This is the body of the post
                     formatted in a long way...`,
-                author: 'Hector Gracia',
-                views: 1000,
-                comments: [
-                    {author: 'Test Commentor-1', body: 'This is very nice book'},
-                    {author: 'Test Commentor-2', body: 'This is very nice book'},
-                    ],
-                isLive:  true
-                };
+    author: 'Hector Gracia',
+    views: 1000,
+    comments: [
+        { author: 'Test Commentor-1', body: 'This is very nice book' },
+        { author: 'Test Commentor-2', body: 'This is very nice book' },
+    ],
+    isLive: true
+};
 console.log(myPost);
-                
+
 createHeader('Excercise-6 : Constructor Functions');
 
 function MyBlogPost(title, body, author) {
@@ -559,21 +559,21 @@ function MyBlogPost(title, body, author) {
     this.isLive = false
 }
 
-let myNewPost = new MyBlogPost('Title-A', 
-                                'Body content of post', 
-                                'Sagar Kadam');
+let myNewPost = new MyBlogPost('Title-A',
+    'Body content of post',
+    'Sagar Kadam');
 console.log(myNewPost);
 
 
 createHeader('Excercise-7 : Price Range Objects');
 
 let priceRanges = [
-    {label: '$', tooltip: 'Inexpensive', minPerPerson: 0, maxPerPerson: 10}, 
-    {label: '$$', tooltip: 'Moderate', minPerPerson: 11, maxPerPerson: 20}, 
-    {label: '$$$', tooltip: 'Expensive', minPerPerson: 21, maxPerPerson: 50}
+    { label: '$', tooltip: 'Inexpensive', minPerPerson: 0, maxPerPerson: 10 },
+    { label: '$$', tooltip: 'Moderate', minPerPerson: 11, maxPerPerson: 20 },
+    { label: '$$$', tooltip: 'Expensive', minPerPerson: 21, maxPerPerson: 50 }
 ];
 
-let restaurants = [ {averagePerPerson: 5}]
+let restaurants = [{ averagePerPerson: 5 }]
 
 
 createHeader('Arrays');
@@ -583,60 +583,60 @@ const numbers1 = arrayFromRange(-10, -4);
 
 function arrayFromRange(min, max) {
     let array = [];
-    for(let number = min; number <= max; number++) {
+    for (let number = min; number <= max; number++) {
         array.push(number);
     }
     console.log(array);
 }
 
 createHeader('Excercise-2 - Search element like includes');
-const numbers2= [1,2,3,4,5];
+const numbers2 = [1, 2, 3, 4, 5];
 console.log(includes(numbers2, 1) ? 'Number exists' : 'Number Not Found')
 
 function includes(array, searchElement) {
-    for(element of array) {
-        if(element === searchElement) return true;
+    for (element of array) {
+        if (element === searchElement) return true;
     }
     return false;
 }
 
 createHeader('Excercise-3 - Except Elements');
-const numbers3 = [1,2,3,4,5,6,1,5,2];
-const excludedArray = except(numbers3, [1,2]);
+const numbers3 = [1, 2, 3, 4, 5, 6, 1, 5, 2];
+const excludedArray = except(numbers3, [1, 2]);
 console.log(excludedArray);
 
 function except(array, excluded) {
     let newArray = []
-    for(element of array) {
-        if(!excluded.includes(element))
-        newArray.push(element)
+    for (element of array) {
+        if (!excluded.includes(element))
+            newArray.push(element)
     }
     return newArray;
 }
 
 createHeader('Excercise-5 - Count of Occurances');
-const numbers4 = [1,2,3,4,5,1,1,1];
+const numbers4 = [1, 2, 3, 4, 5, 1, 1, 1];
 const count = countOfOccurances(numbers4, 1);
 console.log(count);
 
 function countOfOccurances(array, searchEleement) {
     let count = 0;
     for (element of array) {
-        if(element === searchEleement) {
-            count += 1 
+        if (element === searchEleement) {
+            count += 1
         }
     }
     return count;
 }
 
 createHeader('Excercise-6 - Get Max');
-const numbers5 = [1,2,23,3,4,5]
+const numbers5 = [1, 2, 23, 3, 4, 5]
 const maxNumber = getMaxNumberFromArray(numbers5);
 console.log(maxNumber);
 
 function getMaxNumberFromArray(array) {
-    
-    if(array.length === 0) return undefined;
+
+    if (array.length === 0) return undefined;
 
     /*
     let max = array[0];
@@ -648,17 +648,17 @@ function getMaxNumberFromArray(array) {
     } 
     return max;
     */
-    return array.reduce((a,b) => (a > b) ? a : b);
+    return array.reduce((a, b) => (a > b) ? a : b);
 }
 
 
 createHeader('Excercise-7 - Movies');
 
 const movies = [
-    {title: 'a', year: 2018, rating: 4.5},
-    {title: 'b', year: 2018, rating: 4.7},
-    {title: 'c', year: 2018, rating: 3},
-    {title: 'd', year: 2017, rating: 4.5},
+    { title: 'a', year: 2018, rating: 4.5 },
+    { title: 'b', year: 2018, rating: 4.7 },
+    { title: 'c', year: 2018, rating: 3 },
+    { title: 'd', year: 2017, rating: 4.5 },
 ];
 
 // All the movies of 2018 with rating > 4
@@ -668,7 +668,7 @@ const movies = [
 
 const titles = movies
     .filter(m => m.year === 2018 && m.rating >= 4)
-    .sort((a,b) => a.rating - b.rating)
+    .sort((a, b) => a.rating - b.rating)
     .reverse()
     .map(m => m.title)
 
@@ -677,13 +677,13 @@ console.log(titles);
 createHeader('Functions');
 
 createHeader('Excercise-1 - Sum of Arguments');
-console.log(sumElements([1,2,3,4]));
+console.log(sumElements([1, 2, 3, 4]));
 
 function sumElements(...items) {
-    if(items.length === 1 && Array.isArray(items[0]))
+    if (items.length === 1 && Array.isArray(items[0]))
         items = [...items[0]];
 
-    return items.reduce((a,b) => a + b);
+    return items.reduce((a, b) => a + b);
 }
 
 createHeader('Excercise-2 - Area of a Circle');
@@ -695,6 +695,31 @@ const myNewcicle = {
     }
 };
 console.log(myNewcicle.area)
+
+createHeader('Async Flow => setTimeout');
+console.log('Start Script..');
+setTimeout(() => { console.log('File Downloaded !!!') }, 2000);
+console.log('Second Line to Print..')
+
+createHeader('Arrow Function ; () => {}');
+() => { }
+
+createHeader('Promise Demo');
+const dataProviderPromise = new Promise((resolve, reject) => {
+    let noIssues = true;
+    if (noIssues) {
+        resolve([1, 2, 3]);
+    } else {
+        reject('Error Inside the promise.')
+    }
+});
+
+dataProviderPromise
+    .then((res) => { console.log('Inside Then..'); console.log(res) })
+    .catch((err) => { console.log('Inside Catch'); console.log(err) })
+
+
+
 
 
 
